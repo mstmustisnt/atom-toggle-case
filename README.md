@@ -1,4 +1,4 @@
-# toggle-case package
+# selection-toggle-case package
 
 Atom package to toggle selected text case.
 
