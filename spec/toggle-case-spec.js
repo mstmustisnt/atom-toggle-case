@@ -7,10 +7,10 @@ describe('ToggleCase', () => {
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('toggle-case');
+    activationPromise = atom.packages.activatePackage('selection-toggle-case');
   });
 
-  describe('when the toggle-case:toggle event is triggered', () => {
+  describe('when the selection-toggle-case:toggle event is triggered', () => {
     it('changed mixed case starting with a lower-cased letter to upper case', () => {
       const initialValue = 'mIxedCase';
       const expectedValue = initialValue.toUpperCase();
@@ -30,7 +30,7 @@ describe('ToggleCase', () => {
       spyOn(fakeSelection, 'deleteSelectedText').andCallThrough();
       spyOn(fakeSelection, 'insertText').andCallThrough();
 
-      atom.commands.dispatch(workspaceElement, 'toggle-case:toggle');
+      atom.commands.dispatch(workspaceElement, 'selection-toggle-case:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -64,7 +64,7 @@ describe('ToggleCase', () => {
       spyOn(fakeSelection, 'deleteSelectedText').andCallThrough();
       spyOn(fakeSelection, 'insertText').andCallThrough();
 
-      atom.commands.dispatch(workspaceElement, 'toggle-case:toggle');
+      atom.commands.dispatch(workspaceElement, 'selection-toggle-case:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -98,7 +98,7 @@ describe('ToggleCase', () => {
       spyOn(fakeSelection, 'deleteSelectedText').andCallThrough();
       spyOn(fakeSelection, 'insertText').andCallThrough();
 
-      atom.commands.dispatch(workspaceElement, 'toggle-case:toggle');
+      atom.commands.dispatch(workspaceElement, 'selection-toggle-case:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -132,7 +132,7 @@ describe('ToggleCase', () => {
       spyOn(fakeSelection, 'deleteSelectedText').andCallThrough();
       spyOn(fakeSelection, 'insertText').andCallThrough();
 
-      atom.commands.dispatch(workspaceElement, 'toggle-case:toggle');
+      atom.commands.dispatch(workspaceElement, 'selection-toggle-case:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -149,7 +149,7 @@ describe('ToggleCase', () => {
 
     it('does not break if there is no editor', () => {
       spyOn(atom.workspace, 'getActiveTextEditor').andReturn(undefined);
-      atom.commands.dispatch(workspaceElement, 'toggle-case:toggle');
+      atom.commands.dispatch(workspaceElement, 'selection-toggle-case:toggle');
 
       waitsForPromise(() => activationPromise);
 
@@ -175,7 +175,7 @@ describe('ToggleCase', () => {
       spyOn(fakeSelection, 'deleteSelectedText').andCallThrough();
       spyOn(fakeSelection, 'insertText').andCallThrough();
 
-      atom.commands.dispatch(workspaceElement, 'toggle-case:toggle');
+      atom.commands.dispatch(workspaceElement, 'selection-toggle-case:toggle');
 
       waitsForPromise(() => {
         return activationPromise;

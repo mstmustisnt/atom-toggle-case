@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-shift-alt-U": "toggle-case:toggle"
+    "ctrl-shift-alt-U": "selection-toggle-case:toggle"
   }
 }

@@ -3,7 +3,7 @@
     "atom-text-editor": [
       {
         "label": "Toggle case",
-        "command": "toggle-case:toggle"
+        "command": "selection-toggle-case:toggle"
       }
     ]
   }
